@@ -1,0 +1,41 @@
+type File {
+  id: String
+  contentType: String
+}
+
+type TrustedBrand {
+  _id: String
+  name: String
+  file: File
+  createdAt: String
+  updatedAt: String
+}
+
+type User {
+  _id: String
+  firstname: String
+  lastname: String
+  email: String
+  password: String
+  role: String
+}
+
+input UserInput {
+  firstname: String
+  lastname: String
+  email: String
+  password: String
+  role: String
+}
+
+type Query {
+  brands: [TrustedBrand]
+  brand(id: ID!): TrustedBrand
+  me: User
+}
+
+type Mutation {
+  updateBrandName(id: ID!, name: String): TrustedBrand
+  registerUser(userInput: UserInput): User
+  login(email: String, password: String): User
+}

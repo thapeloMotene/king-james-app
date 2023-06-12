@@ -1,0 +1,46 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a simple backend for serving files, file metadata, in REST & GraphQL",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf ./dist",
+    "build": "tsc",
+    "start": "ts-node --esm src/index.ts",
+    "start:prod": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Thapelo Motene",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.3",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "envalid": "^7.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "graphql": "^16.6.0",
+    "graphql-passport": "^0.6.5",
+    "mongoose": "^7.2.2",
+    "multer": "^1.4.5-lts.1",
+    "multer-gridfs-storage": "^5.0.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/express-session": "^1.17.7",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^20.2.5",
+    "@types/passport": "^1.0.12",
+    "i": "^0.3.7",
+    "npm": "^9.7.1",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
+  }
+}
